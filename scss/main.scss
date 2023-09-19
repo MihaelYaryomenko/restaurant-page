@@ -1,0 +1,123 @@
+@import './varuables';
+@import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inclusive+Sans:ital@0;1&family=Merriweather:ital,wght@0,700;0,900;1,400;1,700&display=swap');
+
+@mixin centerFlexBox($align-items) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items;
+}
+
+@mixin square($heightWidth) {
+  height: $heightWidth;
+  width: $heightWidth;
+}
+
+#main-container {
+  @include centerFlexBox(normal);
+  justify-content: space-between;
+  background-color: $secondary-color;
+  height: 100vh;
+}
+
+#nav-section {
+  @include centerFlexBox(center);
+  font-family: 'Bebas Neue', sans-serif;
+  color: $fifth-color;
+  width: 100%;
+  background-color: $main-color;
+  height: 150px;
+  
+  .h1-logo-main {
+    letter-spacing: 2px;
+    text-shadow: 7px 7px 0px black;
+    transition: 250ms;
+    font-size: 4.5rem;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      font-size: 4.6rem;
+      text-shadow: 9px 9px 0px black;
+    }
+
+    &:active {
+      opacity: 0.8}
+  }
+}
+
+#text-box {
+  @include centerFlexBox(center);
+  justify-content: space-between;
+  width: 325px;
+  height: 80%;
+  background-color: $third-color;
+  border-radius: 15px;
+  margin-left: 50px;
+  padding: 20px;
+  border: $main-color 5px dashed;
+  
+  .text-description {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+  }
+}
+
+#tacos {
+  border: $fifth-color 5px solid;
+  border-radius: 15px;
+  margin: 0px 50px 0px 0px;
+  display: block;
+  max-width: 800px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+}
+
+#middle-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#text-box p:last-child {
+  font-style: italic;
+  font-size: 1.6rem
+}
+
+footer {
+  @include centerFlexBox(center);
+  width: 100%;
+  background-color: $fifth-color;
+
+  .footer-text {
+    font-size: 1.2rem;
+    font-family: 'Inclusive Sans', sans-serif;
+  }
+}
+
+#about-section {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+
+#github-logo {
+  @include square(32px);
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+a {
+  margin-left: 10px;
+}
