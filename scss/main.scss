@@ -22,11 +22,12 @@
 
 #nav-section {
   @include centerFlexBox(center);
+  flex-direction: column-reverse;
   font-family: 'Bebas Neue', sans-serif;
   color: $fifth-color;
-  width: 100%;
   background-color: $main-color;
-  height: 150px;
+  height: 200px;
+  justify-content: space-between;
   
   .h1-logo-main {
     letter-spacing: 2px;
@@ -42,7 +43,8 @@
     }
 
     &:active {
-      opacity: 0.8}
+      opacity: 0.8
+    }
   }
 }
 
@@ -61,6 +63,25 @@
     font-weight: 700;
     font-family: 'Merriweather', serif;
     font-size: 1.4rem;
+  }
+}
+
+#btn-container {
+  display: flex;
+}
+
+.navBtn {
+  font-size: 1.8rem;
+  margin: 5px;
+  user-select: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 }
 
