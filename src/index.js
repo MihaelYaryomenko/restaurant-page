@@ -3,7 +3,10 @@ import { loadMenuPage } from "./components/menuPage";
 import { loadAboutPage } from "./components/aboutPage";
 import { loadNavBar } from "./components/navBar";
 
-document.addEventListener("DOMContentLoaded", loadNavBar)
+document.addEventListener("DOMContentLoaded", () => {
+  loadNavBar()
+  loadInitialPage()
+})
 
 window.addEventListener('load', () => {
   const content = document.querySelector('#middle-container')
